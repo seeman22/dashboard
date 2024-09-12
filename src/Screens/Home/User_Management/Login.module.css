@@ -1,0 +1,110 @@
+.back {
+    background-image: url('/src/assests/pexels-karolina-grabowska-5624997.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width:100vw;
+    margin:0px;
+    padding:0px;
+
+  }
+  
+.text{
+    color:white
+}
+.containerFluid {
+    background-color:#E32636;
+    color:aliceblue
+  }
+  
+  .navbarBrand {
+    color: aliceblue;
+    padding: 25px;
+    text-decoration: none;
+  }
+  /* Login.module.css */
+.textWhite {
+  color: white;
+}
+.btnnnn{
+  background: #E32636;
+  color: white;
+  border: none;
+  width: 100px;
+  min-width: 100px;
+}
+
+.table {
+  border: 2px solid #E32636;
+}
+
+.table th,
+.table td {
+  border: 2px solid #FF3800;
+}
+
+/* Logout button */
+.navbarBrandss {
+  color: aliceblue;
+  padding: 25px;
+  text-decoration: none;
+  background-color: black;
+  height: 10px;
+  padding-top: 25px;
+  cursor: pointer;
+
+ 
+}
+
+/* User Management dropdown */
+.dropdown-menu .dropdown-item {
+  color: black;
+  text-align: center;
+}
+
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus {
+  text-decoration: none;
+}
+
+
+.dropdown-menu .dropdown-item:first-child {
+  color: black;
+  text-align: center;
+  text-decoration: none;
+}
+.btnnnnn{
+  background: green;
+  color: white;
+  border: none;
+  width: 100px;
+  min-width: 100px;
+}
+/* Login.module.css */
+
+
+/* Login.module.css */
+/* Login.module.css */
+
+.containerFluid {
+  background-color: #000; /* Assuming you want a dark background */
+}
+.card{
+  background-color: whitesmoke;
+}
+.r{
+  display:flex;
+  justify-content: center;
+}
+.centeredTable {
+  margin: 0 auto;
+  border: 2px solid; /* Example of custom border color */
+  width: 100%; /* Ensures the table does not overflow */
+  border-radius: 50px;
+}
+.icon{
+  font-size: 24px; /* Adjust this value as needed */
+  color: #000;
+}
+
