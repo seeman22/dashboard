@@ -11,11 +11,15 @@ import Signup from '../Screens/Login/Signup';
 import VerifyOtp from '../Screens/Login/VerifyOtp';
 import ResetPassword from '../Screens/Login/ResetPassword';
 import Leads from '../Screens/Home/leads/Leads';
+import Category from '../Screens/Home/master/Category';
+import Enquiry from '../Screens/Home/master/Enquiry';
+import Requirement from '../Screens/Home/master/Requirement';
+import AddleadModal from '../Screens/Home/Modals/leadmodal/AddleadModal';
 
 function Routerpath() {
   const router = createBrowserRouter([
     {
-      path: '/',
+      // path: '/',
       element: <UserCheck />,
       children: [
         {
@@ -37,7 +41,7 @@ function Routerpath() {
       ],
     },
     {
-      path: '/',
+      // path: '/',
       element: <NotAllow />,
       children: [
         {
@@ -62,7 +66,21 @@ function Routerpath() {
             },{
               path:'leads',
               element:<Leads/>
-            }
+            },{
+              path:'category',
+              element:<Category/>
+            },{
+              path:'enquiry',
+              element:<Enquiry/>
+            },
+            {
+                path:'requirement',
+                element:<Requirement/>
+            },
+            {
+              path:'leadAdd',
+              element:<AddleadModal/>
+            },
           ],
         },
       ],

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
-import { Button, Modal, Form, Input,Select,message} from 'antd';
+import { Button, Modal, Form, Input,Select,message,Col,Row} from 'antd';
 import { update } from '../../../axios/Services';
 import { Adminsss } from '../../../axios/Services';
 import { handledealerid } from '../../../redux/reducers/AuthReducers';
@@ -84,24 +84,37 @@ handles();
             })},[token])
       console.log(dealerid)
       console.log(userdata.userType);
+
+      const formItemLayout = {
+        labelCol: { xs: { span: 24 }, sm: { span: 12 } },
+        wrapperCol: { xs: { span: 24 }, sm: { span: 24 } },
+      };
+
     
   return (
     <div>
 
 <Modal
-    title={"EDIT  DETAILS"}
+    title={"EDIT"}
     open={editu}
     onOk={handleSubmit}
    onCancel={onclose}
+   width={800}
   >
-      <Form  >
+      <Form {...formItemLayout} >
+
+        <Row>
+          
+          <Col span={12}>
         <Form.Item
           label="Name"
           validateStatus={touched.name && errors.name ? 'error' : ''}
           help={touched.name && errors.name ? errors.name : ''}
         >
           <Input name="name" value={values.name} onChange={handleChange} onBlur={handleBlur} />
-        </Form.Item>
+        </Form.Item></Col>
+        <Col span={12}>
+
         <Form.Item
           label="UserName"
           validateStatus={touched.userName && errors.userName ? 'error' : ''}
@@ -109,27 +122,39 @@ handles();
         >
           <Input name="userName" value={values.userName} onChange={handleChange} onBlur={handleBlur} />
         </Form.Item>
-        <Form.Item
+        </Col>
+        
+        </Row>
+       
+
+       <Row>
+        <Col span={12}>
+       <Form.Item
           label="PhoneNumber"
           validateStatus={touched.phoneNumber && errors.phoneNumber ? 'error' : ''}
           help={touched.phoneNumber && errors.phoneNumber ? errors.phoneNumber : ''}
         >
           <Input name="phoneNumber" value={values.phoneNumber} onChange={handleChange} onBlur={handleBlur} />
         </Form.Item>
-        <Form.Item
+       </Col>
+       <Col span={12}> <Form.Item
           label="Email"
           validateStatus={touched.email && errors.email ? 'error' : ''}
           help={touched.email && errors.email ? errors.email : ''}
         >
           <Input name="email" value={values.email} onChange={handleChange} onBlur={handleBlur} />
-        </Form.Item>
-        <Form.Item
+        </Form.Item></Col>
+       </Row>
+    
+     <Row>
+      <Col span={12}><Form.Item
           label="Landline Number"
           validateStatus={touched.landline_number && errors.landline_number ? 'error' : ''}
           help={touched.landline_number && errors.landline_number ? errors.landline_number : ''}
         >
           <Input name="landline_number" value={values.landline_number} onChange={handleChange} onBlur={handleBlur} />
-        </Form.Item>
+        </Form.Item></Col>
+        <Col span={12}>
         <Form.Item
           label="State"
           validateStatus={touched.state && errors.state ? 'error' : ''}
@@ -137,13 +162,19 @@ handles();
         >
           <Input name="state" value={values.state} onChange={handleChange} onBlur={handleBlur} />
         </Form.Item>
-        <Form.Item
+        </Col>
+        </Row>
+       
+<Row>
+  <Col span={12}>
+<Form.Item
           label="City"
           validateStatus={touched.city && errors.city ? 'error' : ''}
           help={touched.city && errors.city ? errors.city : ''}
         >
           <Input name="city" value={values.city} onChange={handleChange} onBlur={handleBlur} />
-        </Form.Item>
+        </Form.Item></Col>
+         <Col span={12} >
         <Form.Item
           label="Password"
           validateStatus={touched.password && errors.password ? 'error' : ''}
@@ -151,6 +182,10 @@ handles();
         >
           <Input.Password name="password" value={values.password} onChange={handleChange} onBlur={handleBlur} />
         </Form.Item>
+        </Col></Row>
+    
+        
+        
         {/* <Form.Item
           label="User Type"
           validateStatus={touched.userType && errors.userType ? 'error' : ''}
@@ -158,30 +193,20 @@ handles();
         >
           <Input name="userType" value={values.userType} onChange={handleChange} onBlur={handleBlur} />
         </Form.Item> */}
-        <Form.Item
+
+        <Row>
+          <Col span={12}>
+          <Form.Item
           label="Pincode"
           validateStatus={touched.pincode && errors.pincode ? 'error' : ''}
           help={touched.pincode && errors.pincode ? errors.pincode : ''}
         >
           <Input name="pincode" value={values.pincode} onChange={handleChange} onBlur={handleBlur} />
         </Form.Item>
-        {/* <Form.Item
-          label="Dealer ID"
-          validateStatus={touched.dealer_id && errors.dealer_id ? 'error' : ''}
-          help={touched.dealer_id && errors.dealer_id ? errors.dealer_id : ''}
-        >
-          <Input name="dealer_id" value={values.dealer_id} onChange={handleChange} onBlur={handleBlur} />
-        </Form.Item> */}
+          </Col>
 
-        {/* <Form.Item
-          label="user ID"
-          validateStatus={touched.userId  && errors.userId  ? 'error' : ''}
-          help={touched.userId  && errors.userId  ? errors.userId  : ''}
-        >
-          <Input name="userId " value={values.userId } onChange={handleChange} onBlur={handleBlur} />
-        </Form.Item> */}
-
-        {userdata.userType === 4 ? (
+          <Col span={12}>
+          {userdata.userType === 4 ? (
     <Form.Item 
         label="Dealer"
         validateStatus={touched.dealer_id && errors.dealer_id ? 'error' : ''}
@@ -201,6 +226,26 @@ handles();
         </Select>
     </Form.Item>
 ) : null}
+          </Col>
+        </Row>
+    
+        {/* <Form.Item
+          label="Dealer ID"
+          validateStatus={touched.dealer_id && errors.dealer_id ? 'error' : ''}
+          help={touched.dealer_id && errors.dealer_id ? errors.dealer_id : ''}
+        >
+          <Input name="dealer_id" value={values.dealer_id} onChange={handleChange} onBlur={handleBlur} />
+        </Form.Item> */}
+
+        {/* <Form.Item
+          label="user ID"
+          validateStatus={touched.userId  && errors.userId  ? 'error' : ''}
+          help={touched.userId  && errors.userId  ? errors.userId  : ''}
+        >
+          <Input name="userId " value={values.userId } onChange={handleChange} onBlur={handleBlur} />
+        </Form.Item> */}
+
+     
 
       </Form>
     </Modal>

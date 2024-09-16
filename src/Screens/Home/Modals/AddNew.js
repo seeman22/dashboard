@@ -1,4 +1,4 @@
-import { Button, Modal, Form, Input, Select,message } from 'antd';
+import { Button, Modal, Form, Input, Select,message, Col,Row } from 'antd';
 import { dropdown, newadminsadd, viewuser } from '../../../axios/Services';
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
@@ -89,85 +89,125 @@ function AddNew({ addnew, onclose, handlesub,usertype }) {
                 
             })},[token])
             console.log(usertype);
+
+            const formItemLayout = {
+                labelCol: { xs: { span: 24 }, sm: { span: 12 } },
+                wrapperCol: { xs: { span: 24 }, sm: { span: 24 } },
+              };
     
     return (
         <Modal
-            title={"ADD DETAILS"}
+            title={"ADD"}
             open={addnew}
             onOk={handleSubmit}
             onCancel={onclose}
+            width={800} // Increase the modal width here
+
         >
-            <Form>
-                <Form.Item
-                    label="Name"
+            <Form {...formItemLayout}>
+                <Row gutter={[24,16]}>
+                    <Col span={12}>       <Form.Item
+        label={<span>Name <span style={{ color: 'red' }}>*</span></span>}
                     validateStatus={touched.name && errors.name ? 'error' : ''}
                     help={touched.name && errors.name ? errors.name : ''}
                 >
-                    <Input name="name" value={values.name} onChange={handleChange} onBlur={handleBlur} />
+                    <Input name="name" value={values.name} onChange={handleChange} onBlur={handleBlur} placeholder='enter the name'  style={{ width: '100%' }}  />
                 </Form.Item>
-                <Form.Item
-                    label="UserName"
+                    </Col>
+
+
+                    <Col span={12}>
+                    <Form.Item
+                    label={<span>UserName <span style={{ color: 'red' }}>*</span></span>}
                     validateStatus={touched.userName && errors.userName ? 'error' : ''}
                     help={touched.userName && errors.userName ? errors.userName : ''}
                 >
-                    <Input name="userName" value={values.userName} onChange={handleChange} onBlur={handleBlur} />
+                    <Input name="userName" value={values.userName} onChange={handleChange} onBlur={handleBlur} placeholder='enter the username'  style={{ width: '100%' }} />
                 </Form.Item>
+                    </Col>
+
+                </Row>
+         
+              <Row  gutter={[24,16]}>
+                <Col span={12}>
                 <Form.Item
-                    label="PhoneNumber"
+                      label={<span>PhoneNumber <span style={{ color: 'red' }}>*</span></span>}
                     validateStatus={touched.phoneNumber && errors.phoneNumber ? 'error' : ''}
                     help={touched.phoneNumber && errors.phoneNumber ? errors.phoneNumber : ''}
                 >
-                    <Input name="phoneNumber" value={values.phoneNumber} onChange={handleChange} onBlur={handleBlur} />
+                    <Input name="phoneNumber" value={values.phoneNumber} onChange={handleChange} onBlur={handleBlur} placeholder=' enter phone number'  style={{ width: '100%' }}  />
                 </Form.Item>
+                </Col>
+
+                <Col span={12}>
                 <Form.Item
                     label="Email"
                     validateStatus={touched.email && errors.email ? 'error' : ''}
                     help={touched.email && errors.email ? errors.email : ''}
                 >
-                    <Input name="email" value={values.email} onChange={handleChange} onBlur={handleBlur} />
+                    <Input name="email" value={values.email} onChange={handleChange} onBlur={handleBlur} placeholder='enter the email'  style={{ width: '100%' }}  />
                 </Form.Item>
+                </Col>
+              </Row>
+              
+              <Row  gutter={[24,16]}>
+                <Col span={12}>
                 <Form.Item
                     label="Landline Number"
                     validateStatus={touched.landline_number && errors.landline_number ? 'error' : ''}
                     help={touched.landline_number && errors.landline_number ? errors.landline_number : ''}
                 >
-                    <Input name="landline_number" value={values.landline_number} onChange={handleChange} onBlur={handleBlur} />
+                    <Input name="landline_number" value={values.landline_number} onChange={handleChange} onBlur={handleBlur} placeholder='enter the landline number'  style={{ width: '100%' }} />
                 </Form.Item>
+                
+                </Col>
+                <Col span={12}>
                 <Form.Item
                     label="State"
                     validateStatus={touched.state && errors.state ? 'error' : ''}
                     help={touched.state && errors.state ? errors.state : ''}
                 >
-                    <Input name="state" value={values.state} onChange={handleChange} onBlur={handleBlur} />
+                    <Input name="state" value={values.state} onChange={handleChange} onBlur={handleBlur} placeholder='enter the state'  style={{ width: '100%' }}  />
                 </Form.Item>
+                </Col>
+              </Row>
+              
+
+              <Row  gutter={[24,16]}>
+                <Col span={12}>
                 <Form.Item
                     label="City"
                     validateStatus={touched.city && errors.city ? 'error' : ''}
                     help={touched.city && errors.city ? errors.city : ''}
                 >
-                    <Input name="city" value={values.city} onChange={handleChange} onBlur={handleBlur} />
+                    <Input name="city" value={values.city} onChange={handleChange} onBlur={handleBlur} placeholder='enter the city'  style={{ width: '100%' }} />
                 </Form.Item>
-                <Form.Item
+                </Col>
+
+             <Col span={12}>
+             <Form.Item
                     label="Password"
                     validateStatus={touched.password && errors.password ? 'error' : ''}
                     help={touched.password && errors.password ? errors.password : ''}
                 >
-                    <Input.Password name="password" value={values.password} onChange={handleChange} onBlur={handleBlur} />
+                    <Input.Password name="password" value={values.password} onChange={handleChange} onBlur={handleBlur} placeholder="enter the password"  style={{ width: '100%' }}  />
                 </Form.Item>
-                {/* <Form.Item
-                    label="User Type"
-                    validateStatus={touched.userType && errors.userType ? 'error' : ''}
-                    help={touched.userType && errors.userType ? errors.userType : ''}
-                >
-                    <Input name="userType" value={values.userType} onChange={handleChange} onBlur={handleBlur} />
-                </Form.Item> */}
+             </Col>
+              </Row>
+            
+               
+            <Row  gutter={[24,16]}>
+                <Col span={12}>
                 <Form.Item
                     label="Pincode"
                     validateStatus={touched.pincode && errors.pincode ? 'error' : ''}
                     help={touched.pincode && errors.pincode ? errors.pincode : ''}
                 >
-                    <Input name="pincode" value={values.pincode} onChange={handleChange} onBlur={handleBlur} />
+                    <Input name="pincode" value={values.pincode} onChange={handleChange} onBlur={handleBlur} placeholder='enter the pincode'  style={{ width: '100%' }}  />
                 </Form.Item>
+                </Col>
+
+                <Col span={12}>
                 {userType === '4' ? (
     <Form.Item 
         label="Dealer"
@@ -179,6 +219,7 @@ function AddNew({ addnew, onclose, handlesub,usertype }) {
             value={values.dealer_id}
             onChange={(value) => setFieldValue('dealer_id', value)}
             onBlur={handleBlur}
+            placeholder="choose the best Answer"
         >
             {dealerid.map(dealer => (
                 <Option key={dealer.userId} value={dealer.userId}>
@@ -188,6 +229,10 @@ function AddNew({ addnew, onclose, handlesub,usertype }) {
         </Select>
     </Form.Item>
 ) : null}
+                </Col>
+            </Row>
+               
+              
             </Form>
         </Modal>
     );

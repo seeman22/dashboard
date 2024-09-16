@@ -99,3 +99,23 @@ export const compettior=(data)=>{
     return axios.post('/dropdown/dropdownCompetitor',data);
 }
 
+export const masterlist=(data,value,size,page)=>{
+    return axios.post(`/masters/list_${value}?page=${page}&size=${size}`,data,value);
+}
+export const masteradd=(data,value)=>{
+    return axios.post(`/masters/create_${value}`,data,value)
+}
+
+export const masterdelete=(data,value)=>{
+    return axios.post(`/masters/delete_${value}`,data,value);
+}
+
+export const masterupdate=(data,value)=>{
+    return axios.post(`/masters/update_${value}`,data,value);
+}
+export const dropdownrequirement=(data)=>{
+    return axios.post('/dropdown/dropdownRequirements',data)
+}
+export const datamasterlist=(data,value)=>{
+    return axios.post(`/masters/list_${value}`,data,value);
+}

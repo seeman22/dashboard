@@ -10,7 +10,12 @@ const initialState = {
     userType:'',
     otp:'',
     resetkey:'',
-    filter:{}
+    filter:{},
+    filt:false,
+    leadfilt:false,
+    masterfilt:false,
+    masterenquiryfilt:false,
+    
     
 };
 
@@ -52,9 +57,17 @@ export const redu = createSlice({
         },
         handlefilter:(state,action)=>{
             state.filter=action.payload;
-        }
+        },handlefilt:(state,action)=>{
+            state.filt=action.payload;
+        },
+        handleleadfilt:(state,action)=>{
+            state.leadfilt=action.payload;
+        },
+        handlemasterfilt:(state,action)=>{
+            state.masterfilt=action.payload;
+        },
     }
 });
 
-export const { handletoken ,handledata,handleuserid,handlemodal,handleaddmodal,handleditmodal,handledealerid,handleuserType,handleresetkey,handlefilter} = redu.actions;
+export const { handletoken ,handledata,handleuserid,handlemodal,handleaddmodal,handleditmodal,handledealerid,handleuserType,handleresetkey,handlefilter,handlefilt,handleleadfilt,handlemasterfilt} = redu.actions;
 export default redu.reducer;
