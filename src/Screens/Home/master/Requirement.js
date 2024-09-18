@@ -76,6 +76,11 @@ function Requirement() {
 
   const columns = [
     {
+      title: "SNO",
+      dataIndex: "sno",
+      key: "sno",
+    },
+    {
       title: "enquireTypeName",
       dataIndex: "RequirementsId",
       key: "RequirementsId",
@@ -117,7 +122,8 @@ function Requirement() {
     },
   ];
 
-  const dataSource = enquirylist?.map((ele) => ({
+  const dataSource = enquirylist?.map((ele,index) => ({
+    sno: (currentPage - 1) * pageSize + (index + 1),
     RequirementsId: ele.RequirementsId,
     RequirementsName: ele.RequirementsName,
   }));
@@ -144,12 +150,12 @@ function Requirement() {
         <Col></Col>
       </Row>
 
-      <Row>
+      <Row className="mt-5 ms-5">
         {searching && (
           <FilterMaster searching={searching} setSearching={setSearching} />
         )}
       </Row>
-      <Row className="mt-5 ms-5 me-5">
+      <Row className="mt-3 ms-5 me-5">
         <Col span={24}>
           <Table
             dataSource={dataSource}

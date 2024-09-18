@@ -131,7 +131,7 @@ function VerifyOtp() {
             <Row justify="end">
               {showResendButton ? (
                 <Button
-                  className="btn btn-primary mt-5 mb-2"
+                className={`btn btn-primary mt-5  ${classes.custombutton}`}
                   type="primary"
                   onClick={handleResendOtp}
                   onMouseEnter={() => setShowResendButton(false)}
@@ -140,7 +140,7 @@ function VerifyOtp() {
                 </Button>
               ) : (
                 <Button
-                  className="btn btn-primary mt-5 mb-2 "
+                className={`btn btn-primary mt-5  ${classes.custombutton}`}
                   type="primary"
                   htmlType="submit"
                   onClick={handleverifyotp}

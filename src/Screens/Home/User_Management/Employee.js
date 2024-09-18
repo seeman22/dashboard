@@ -106,6 +106,11 @@ function Employee() {
 
   const columns = [
     {
+      title: "SNO",
+      dataIndex: "sno",
+      key: "sno",
+    },
+    {
       title: "Name",
       dataIndex: "name",
       key: "name",
@@ -155,7 +160,8 @@ function Employee() {
     },
   ];
 
-  const dataSource = dta.map((ele) => ({
+  const dataSource = dta.map((ele,index) => ({
+    sno: (currentPage - 1) * 2 + (index + 1),
     name: ele.name,
     userName: ele.userName,
     phoneNumber: ele.phoneNumber,

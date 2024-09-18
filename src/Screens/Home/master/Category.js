@@ -99,6 +99,11 @@ export default function Category() {
   console.log(editupdate);
   const columns = [
     {
+      title: "SNO",
+      dataIndex: "sno",
+      key: "sno",
+    },
+    {
       title: "customerCategoryId",
       dataIndex: "customerCategoryId",
       key: "customerCategoryId",
@@ -154,7 +159,8 @@ export default function Category() {
     },
   ];
 
-  const dataSource = listdata?.map((ele) => ({
+  const dataSource = listdata?.map((ele,index) => ({
+    sno: (currentPage - 1) * pageSize + (index + 1),
     customerCategoryId: ele.customerCategoryId,
     customerCategoryName: ele.customerCategoryName,
   }));
@@ -184,12 +190,12 @@ export default function Category() {
         <Col></Col>
       </Row>
 
-      <Row>
+      <Row className="mt-5 ms-5">
         {searching && (
           <FilterMaster searching={searching} setSearching={setSearching} />
         )}
       </Row>
-      <Row className="mt-5 ms-5 me-5">
+      <Row className="mt-3 ms-5 me-5">
         <Col span={24}>
           <Table
             dataSource={dataSource}

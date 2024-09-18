@@ -55,7 +55,7 @@ function Dealer() {
     dispatch(handleuserType("3"));
   };
 
-  const handlesub = (page = 1, size = 3) => {
+  const handlesub = (page = 1, size = 2) => {
     let formData = new FormData();
     formData.append("token", token);
     formData.append("type", "3");
@@ -104,6 +104,11 @@ function Dealer() {
     dispatch(handlefilter({}));
   };
   const columns = [
+    {
+      title: "SNO",
+      dataIndex: "sno",
+      key: "sno",
+    },
     {
       title: "Name",
       dataIndex: "name",
@@ -154,7 +159,8 @@ function Dealer() {
     },
   ];
 
-  const dataSource = dta.map((ele) => ({
+  const dataSource = dta.map((ele,index) => ({
+    sno: (currentPage - 1) * 2 + (index + 1),
     name: ele.name,
     userName: ele.userName,
     phoneNumber: ele.phoneNumber,

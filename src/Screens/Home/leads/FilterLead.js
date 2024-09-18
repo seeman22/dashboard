@@ -47,7 +47,7 @@ function FilterLead() {
   return (
     <>
       <Form onFinish={handleSubmit}>
-        <Row>
+        <Row gutter={[16,16]}> 
           <Col>
             <Form.Item
               label="Lead ID"
@@ -145,9 +145,9 @@ function FilterLead() {
           </Col>
         </Row>
 
-        <Row gutter={[16]}>
+        <Row gutter={[24,16]}>
           <Col>
-            <Button className="btn btn-danger mb-2" onClick={handlereset}>
+            <Button     className={`btn btn-danger ${classes.custombutton}`} onClick={handlereset}>
               reset
             </Button>
           </Col>
@@ -155,7 +155,7 @@ function FilterLead() {
             <Button
               type="primary"
               htmlType="submit"
-              className="btn btn-danger mb-2"
+              className={`btn btn-danger ${classes.custombutton}`}
             >
               Submit
             </Button>

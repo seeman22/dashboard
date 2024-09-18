@@ -104,7 +104,7 @@ function Signup() {
             />
             <Row justify="end">
               <Button
-                className="btn btn-primary mt-5 mb-2"
+         className={`btn btn-primary mt-5 ${classes.custombutton}`}
                 type="primary"
                 htmlType="submit"
               >

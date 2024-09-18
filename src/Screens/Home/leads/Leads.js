@@ -279,7 +279,7 @@ function Leads() {
   ];
 
   const dataSource = List.map((ele, index) => ({
-    sno: index + 1,
+    sno: (currentPage - 1) * pageSize + (index + 1),
     leadId: ele.leadId,
     leadCode: ele.leadCode,
     leadName: ele.leadName,
@@ -320,7 +320,7 @@ function Leads() {
         </Col>
       </Row>
 
-      <Row className="mt-5">{leadfilt && <FilterLead />}</Row>
+      <Row className="mt-5 ms-5">{leadfilt && <FilterLead />}</Row>
 
       <Row>
         <Col span={22}>

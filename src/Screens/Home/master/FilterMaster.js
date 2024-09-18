@@ -3,6 +3,7 @@ import * as Yup from "yup";
 import { useFormik } from "formik";
 import { Button, Form, Input, Row, Col } from "antd";
 import { useDispatch, useSelector } from "react-redux";
+import classes from '../master/Login.module.css';
 import {
   handlemasterfilt,
   handlefilter,
@@ -42,6 +43,7 @@ function FilterMaster({ searching, setSearching }) {
               label="name"
               validateStatus={touched.name && errors.name ? "error" : ""}
               help={touched.name && errors.name ? errors.name : ""}
+              className="ms-5"
             >
               <Input
                 name="name"
@@ -55,7 +57,7 @@ function FilterMaster({ searching, setSearching }) {
 
         <Row gutter={[16]}>
           <Col>
-            <Button className="btn btn-danger mb-2" onClick={handlereset}>
+            <Button className={`btn btn-danger ms-5 ${classes.custombutton}`} onClick={handlereset}>
               reset
             </Button>
           </Col>
@@ -63,7 +65,7 @@ function FilterMaster({ searching, setSearching }) {
             <Button
               type="primary"
               htmlType="submit"
-              className="btn btn-danger mb-2"
+              className={`btn btn-danger  ${classes.custombutton}`} 
             >
               Submit
             </Button>

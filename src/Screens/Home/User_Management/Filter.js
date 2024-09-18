@@ -125,7 +125,7 @@ function Filter() {
             <Button
               type="primary"
               htmlType="submit"
-              className="btn btn-danger mb-2 mx-auto "
+              className={`btn btn-danger ms-5 ${classes.custombutton}`}
               justify="center"
             >
               Submit
@@ -134,7 +134,7 @@ function Filter() {
           <Col>
             {" "}
             <Button
-              className="btn btn-danger mb-2 mx-auto "
+                  className={`btn btn-danger ${classes.custombutton}`}
               onClick={handlereset}
             >
               reset

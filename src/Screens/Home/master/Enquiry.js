@@ -91,6 +91,11 @@ useEffect(() => {
 
   const columns = [
     {
+      title: "SNO",
+      dataIndex: "sno",
+      key: "sno",
+    },
+    {
       title: "enquireId",
       dataIndex: "enquireId",
       key: "enquireId",
@@ -148,7 +153,8 @@ useEffect(() => {
   // const dataSource=enquirylist?.map((ele)=>{
   //     enquireTypeName:ele.enquireTypeName,
   // })
-  const dataSource = enquirylist?.map((ele) => ({
+  const dataSource = enquirylist?.map((ele,index) => ({
+    sno: (currentPage - 1) * pageSize + (index + 1),
     enquireId: ele.enquireId,
     enquireTypeName: ele.enquireTypeName,
   }));
@@ -179,12 +185,12 @@ useEffect(() => {
         </Button>
       </Row>
 
-      <Row className="mt-5">
+      <Row className="mt-5 ms-5">
         {searching && (
           <FilterMaster searching={searching} setSearching={setSearching} />
         )}
       </Row>
-      <Row className="mt-5 ms-5 me-5">
+      <Row className="mt-3 ms-5 me-5">
         <Col span={24}>
           <Table
             dataSource={dataSource}

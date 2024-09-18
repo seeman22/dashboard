@@ -138,7 +138,7 @@ function AddleadModal({ userId, list }) {
     formData.append("requirements_id", values.requirements_id);
     leadadd(formData)
       .then((res) => {
-        message.success(res.data.data.msg);
+        message.success(res.data.msg);
         console.log("added successfully");
         dispatch(handleaddmodal(false));
       })
@@ -383,6 +383,451 @@ function AddleadModal({ userId, list }) {
             </Form.Item>
           </Col>
         </Row>
+        <Row>
+ 
+ <Col span={12}>
+ <Form.Item label="country">
+<Input
+  
+  name="country"
+
+  placeholder="Enter your country"
+  value={values.country}
+  onChange={handleChange}
+  onBlur={handleBlur}
+  style={{ width: "50%" }}
+
+/>
+ </Form.Item>
+</Col>
+
+
+   <Col span={12}>
+   <Form.Item label="state">
+   <Input
+       
+       name="state"
+ 
+       placeholder="Enter your State"
+       value={values.state}
+       onChange={handleChange}
+       onBlur={handleBlur}
+       style={{ width: "50%" }}
+     />
+   </Form.Item>
+  
+   </Col>
+ </Row>
+ <Row>
+  
+   <Col span={12}>
+   <Form.Item label="area">
+   <Input
+       
+       name="area"
+   
+       placeholder="Enter Area"
+       value={values.area}
+       onChange={handleChange}
+       onBlur={handleBlur}
+       style={{ width: "50%" }}
+     />
+   </Form.Item>
+   </Col>
+   <Col span={12}>
+   <Form.Item label="number">
+   <Input
+       
+       name="phone"
+       type="number"
+
+       placeholder="Enter Phone"
+       value={values.phone}
+       onChange={handleChange}
+       onBlur={handleBlur}
+       style={{ width: "50%" }}
+     />
+   </Form.Item>
+    
+   </Col>
+ </Row>
+ <Row>
+   <Col span={12}>
+   <Form.Item label="email">
+
+   <Input
+       
+       name="email"
+       type="email"
+ 
+       placeholder="Enter email"
+       value={values.email}
+       onChange={handleChange}
+       onBlur={handleBlur}
+       style={{ width: "50%" }}
+     />
+   </Form.Item>
+  
+   </Col>
+   <Col span={12}>
+   <Form.Item label="alternative_no">
+
+   <Input
+       
+       name="alternative_no"
+       type="number"
+ 
+       placeholder="Enter alternative_no"
+       value={values.alternative_no}
+       onChange={handleChange}
+       onBlur={handleBlur}
+       style={{ width: "50%" }}
+     />
+   </Form.Item>
+
+   </Col>
+ </Row>
+ <Row>
+   <Col span={12}>
+   <Form.Item label="whatsapp_no">
+   <Input
+       
+       name="whatsapp_no"
+       type="number"
+ 
+       placeholder="Enter Whatsapp_no"
+       value={values.whatsapp_no}
+       onChange={handleChange}
+       onBlur={handleBlur}
+       style={{ width: "50%" }}
+     />
+   </Form.Item>
+  
+  </Col>
+   <Col span={12}>
+   <Form.Item label="customer_category_id">
+   <Input
+       
+       name="customer_category_id"
+       type="number"
+
+       placeholder="Enter customer_category_id"
+       value={values.customer_category_id}
+       onChange={handleChange}
+       onBlur={handleBlur}
+       style={{ width: "50%" }}
+     />
+   </Form.Item>
+ 
+  </Col>
+ </Row>
+ <Row>
+   <Col span={12}>
+   <Form.Item      label="referedBy">
+   <Input
+       
+       name="referedBy"
+       type="number"
+  
+       placeholder="Enter referedBy"
+       value={values.referedBy}
+       onChange={handleChange}
+       onBlur={handleBlur}
+       style={{ width: "50%" }}
+     />
+   </Form.Item>
+  
+   </Col>
+   <Col span={12}>
+   <Form.Item label="refer_country_code">
+   <Input
+       
+       name="refer_country_code"
+       type="number"
+
+       placeholder="Enter refer_country_code"
+       value={values.refer_country_code}
+       onChange={handleChange}
+       onBlur={handleBlur}
+       style={{ width: "50%" }}
+     />
+   </Form.Item>
+ 
+  </Col>
+ </Row>
+
+ <Row>
+   <Col span={12}>
+   <Form.Item label="notes">
+   <Input
+       
+       name="notes"
+
+       placeholder="Enter notes"
+       value={values.notes}
+       onChange={handleChange}
+       onBlur={handleBlur}
+       style={{ width: "50%" }}
+     />
+   </Form.Item>
+   
+   </Col>
+   <Col span={12}>
+   <Form.Item label="description">
+   <Input
+       
+       name="description"
+ 
+       placeholder="Enter description"
+       value={values.description}
+       onChange={handleChange}
+       onBlur={handleBlur}
+       style={{ width: "50%" }}
+     />
+   </Form.Item>
+ 
+  </Col>
+ </Row>
+ <Row>
+   <Col span={12}>
+   <Form.Item label="isNew">
+   <Input
+       
+       name="isNew"
+       type="number"
+
+       placeholder="Enter isNew"
+       value={values.isNew}
+       onChange={handleChange}
+       onBlur={handleBlur}
+       style={{ width: "50%" }}
+     />
+   </Form.Item>
+   
+  </Col>
+   <Col span={12}>
+   <Form.Item label="latitude">
+   <Input
+       
+       name="latitude"
+       type="number"
+ 
+       placeholder="Enter Latitude"
+       value={values.latitude}
+       onChange={handleChange}
+       onBlur={handleBlur}
+       style={{ width: "50%" }}
+     />
+   </Form.Item>
+    
+   </Col>
+ </Row>
+
+ <Row>
+   <Col span={12}>
+   <Form.Item label="longitude">
+   <Input
+       
+       name="longitude"
+       type="number"
+ 
+       placeholder="Enter longitude"
+       value={values.longitude}
+       onChange={handleChange}
+       onBlur={handleBlur}
+       style={{ width: "50%" }}
+     />
+   </Form.Item>
+     
+   </Col>
+   <Col span={12}>
+   <Form.Item label="upload_file">
+   <Input
+       
+       name="upload_file"
+       type="number"
+
+       placeholder="Enter customerId"
+       value={values.upload_file}
+       onChange={handleChange}
+       onBlur={handleBlur}
+       style={{ width: "50%" }}
+     />
+   </Form.Item>
+    
+   </Col>
+ </Row>
+
+ <Row>
+   <Col span={12}>
+   <Form.Item label="upload_file">
+   <Input
+       
+       name="upload_file"
+ 
+       placeholder="Enter upload_file"
+       value={values.upload_file}
+       onChange={handleChange}
+       onBlur={handleBlur}
+       style={{ width: "50%" }}
+     />
+   </Form.Item>
+   
+   </Col>
+   <Col span={12}>
+<Form.Item label="approximate_amount">
+<Input
+       
+       name="approximate_amount"
+       type="number"
+   
+       placeholder="Enter approximate_amount"
+       value={values.approximate_amount}
+       onChange={handleChange}
+       onBlur={handleBlur}
+       style={{ width: "50%" }}
+     />
+</Form.Item>
+    
+   </Col>
+ </Row>
+ <Row>
+   <Col span={12}>
+   <Form.Item label="Pincode">
+   <Input
+       
+       name="Pincode"
+       type="number"
+
+       placeholder="Enter pincode"
+       value={values.Pincode}
+       onChange={handleChange}
+       onBlur={handleBlur}
+       style={{ width: "50%" }}
+
+     />
+   </Form.Item>
+     
+   </Col>
+   <Col span={12}>
+   <Form.Item label="schedule_date">
+   <Input
+       
+       name="schedule_date"
+       type="number"
+
+       placeholder="Enter schedule_date"
+       value={values.schedule_date}
+       onChange={handleChange}
+       onBlur={handleBlur}
+       style={{ width: "50%" }}
+     />
+   </Form.Item>
+   
+  </Col>
+ </Row>
+
+ <Row>
+   <Col span={12}>
+   <Form.Item label="assignedTo">
+     <Input
+     name="assignedTo"
+     type="text"
+     placeholder=""
+     value={values.assignedTo}
+     onChange={handleChange}
+     onBlur={handleBlur}
+     style={{width:'50%'}}
+     />
+   </Form.Item>
+   </Col>
+
+   <Col span={12}>
+   <Form.Item label="receivedDate" >
+     <Input
+     name="receivedDate"
+     type="text"
+     value={values.receivedDate}
+     onChange={handleChange}
+     onBlur={handleBlur}
+     style={{width:'50%'}}
+    />
+   </Form.Item>
+   </Col>
+ </Row>
+
+ <Row>
+   <Col span={12}>
+   <Form.Item label="refer_country_code">
+     <Input
+     name="refer_country_code"
+     type="text"
+     placeholder=""
+     value={values.refer_country_code}
+     onChange={handleChange}
+     onBlur={handleBlur}
+     style={{width:'50%'}}
+     />
+   </Form.Item>
+   </Col>
+
+   <Col span={12}>
+   <Form.Item label="referedPhone" >
+     <Input
+     name="referedPhone"
+     type="text"
+     value={values.referedPhone}
+     onChange={handleChange}
+     onBlur={handleBlur}
+     style={{width:'50%'}}
+    />
+   </Form.Item>
+   </Col>
+ </Row>
+
+ <Row>
+   <Col span={12}>
+   <Form.Item label="alter_country_code">
+     <Input
+     name="alter_country_code"
+     type="text"
+     placeholder=""
+     value={values.alter_country_code}
+     onChange={handleChange}
+     onBlur={handleBlur}
+     style={{width:'50%'}}
+     />
+   </Form.Item>
+   </Col>
+
+   <Col span={12}>
+   <Form.Item label="companyname" >
+     <Input
+     name="company_name"
+     type="text"
+     value={values.company_name}
+     onChange={handleChange}
+     onBlur={handleBlur}
+     style={{width:'50%'}}
+    />
+   </Form.Item>
+   </Col>
+ </Row>
+ <Col span={12}>
+   <Form.Item label="companyname" >
+     <Input
+     name="contact_person"
+     type="text"
+     value={values.contact_person}
+     onChange={handleChange}
+     onBlur={handleBlur}
+     style={{width:'50%'}}
+    />
+   </Form.Item>
+   </Col>
+ <Row>
+
+ </Row>
 
         <Button type="primary" htmlType="submit">
           {addne ? "Update Lead" : "Add Lead"}
