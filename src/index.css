@@ -1,3 +1,8 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +10,71 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.ant-table-row.active-row {
+  background-color: rgb(249, 234, 223)  !important; /* Your desired color for active rows */
+
+}
+
+.ant-table-row.inactive-row {
+  background-color: #fff !important; /* Color for inactive rows */
+}
+.ant-table-thead .ant-table-cell {
+  background-color: #dc3545 !important;
+  color: #fff !important;
+}
+.ant-card-head{
+  background-color: #dc3545 !important;
+  
+
+}
+.ant-card-head-title .ant-typography{
+  color:#fff !important
+}
+
+ .ant-menu-item-selected{
+  background-color: #dc3545 !important;
+}
+.ant-menu-submenu-selected{
+  background-color: #dc3545 !important;
+}
+#svgjsPath2083.apexchart{
+  background-color: #dc3545 !important;
+}
+.ant-btn {
+  background-color: #dc3545 !important;
+  color:#fff !important
+}
+.ant-typography css-dev-only-do-not-override-11lehqq{
+  color:white;
+}
+.ant-table-thead{
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.ant-table-cell{
+  font-weight: 700;
+  font-size: 1em;
+
+
+}
+.ant-table-row {
+  transition: background-color 0.5s ease, transform 0.3s ease;
+}
+
+.ant-table-row:hover {
+  background-color: #f0f0f0; 
+  transform:scale(1.02); 
+}
+.ant-table-bordered .ant-table-cell, 
+.ant-table-bordered .ant-table-header, 
+.ant-table-bordered .ant-table-thead > tr > th, 
+.ant-table-bordered .ant-table-tbody > tr > td {
+  border-color: black; 
 }

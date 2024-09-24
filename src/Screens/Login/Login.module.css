@@ -133,3 +133,19 @@
   height: 50px;
   width:100px;
 }
+.backgroundattarctive {
+  background: linear-gradient(white, black, #B9DFFF); /* Apply gradient correctly */
+  min-height: 100vh; /* Full viewport height */
+  padding: 40px; /* Add padding */
+}
+.colorneedwhite{
+  color:white
+}
+.custombutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* Adjust padding, border, and other styles if needed */
+ padding: 10px 20px; 
+}

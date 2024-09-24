@@ -11,8 +11,13 @@ const initialState = {
     otp:'',
     resetkey:'',
     filter:{},
+    Admin:{},
+    employee:{},
+    requrifilter:{},
+
+    leadfilt:{},
     filt:false,
-    leadfilt:false,
+    leadfiltbooleanvalue:false,
     masterfilt:false,
     masterenquiryfilt:false,
     
@@ -61,13 +66,18 @@ export const redu = createSlice({
             state.filt=action.payload;
         },
         handleleadfilt:(state,action)=>{
-            state.leadfilt=action.payload;
+            state.leadfiltbooleanvalue=action.payload;
         },
         handlemasterfilt:(state,action)=>{
             state.masterfilt=action.payload;
         },
+        handleleadfilterdata:(state,action)=>{
+            state.leadfilt=action.payload;
+        },handleadminfilter:(state,action)=>{
+            state.Admin=action.payload
+        }
     }
 });
 
-export const { handletoken ,handledata,handleuserid,handlemodal,handleaddmodal,handleditmodal,handledealerid,handleuserType,handleresetkey,handlefilter,handlefilt,handleleadfilt,handlemasterfilt} = redu.actions;
+export const { handletoken ,handledata,handleuserid,handlemodal,handleaddmodal,handleditmodal,handledealerid,handleuserType,handleresetkey,handlefilter,handlefilt,handleleadfilt,handlemasterfilt,handleleadfilterdata,handleadminfilter} = redu.actions;
 export default redu.reducer;
