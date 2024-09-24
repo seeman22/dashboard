@@ -10,7 +10,7 @@ function ConfirmModal({activenumber, isActivenumber, confirmmodal,setConfirmmoda
     confirmmodal:boolean
     setConfirmmodal:React.Dispatch<React.SetStateAction<boolean>>
     list:(page:number,size:number)=>void,
-    currentPage:number,
+    currentPage:number
 }) {
     const token=useToken();
     const isActive = (values:string,isActive:number) => {

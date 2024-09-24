@@ -141,11 +141,3 @@
 .colorneedwhite{
   color:white
 }
-.custombutton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  /* Adjust padding, border, and other styles if needed */
- padding: 10px 20px; 
-}

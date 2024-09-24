@@ -10,8 +10,8 @@
 
   }
   
-.allcolorwhite{
-    color:white;
+.text{
+    color:white
 }
 .containerFluid {
     background-color:#E32636;
@@ -97,7 +97,7 @@
   padding: "20px";
   transition: "transform 0.3s ease";
   text-align: "center";
- 
+  color: "#333";
 }
 .r{
   display:flex;
@@ -125,7 +125,7 @@ justify-content: space-between; font-weight: bold; font-size: 16px;
   align-items: center;
   text-align: center;
   /* Adjust padding, border, and other styles if needed */
- padding: 10px 20px; 
+  padding: 10px 20px; /* Adjust padding to your needs */
 }
 .ant-table-row.active-row {
   background-color: #c0b7e8 !important; /* Your desired color for active rows */
@@ -135,12 +135,10 @@ justify-content: space-between; font-weight: bold; font-size: 16px;
   background-color: #fff !important; /* Color for inactive rows */
 }
 .backgroundattarctive {
-  background-color:#f2f2f4; /* Apply gradient correctly */
-  min-height: 100vh; 
+  background: linear-gradient(white, black, #B9DFFF); /* Apply gradient correctly */
+  min-height: 100vh; /* Full viewport height */
   padding: 40px; /* Add padding */
 }
-
-
 .chart{
   width:100%;
   height:50px;
@@ -150,14 +148,4 @@ justify-content: space-between; font-weight: bold; font-size: 16px;
 .tablecontentstyling{
   width: 90%; max-width: 1200px;
   margin: 0 auto; 
-}
-.navbarmenus{
-  background-color: #000;
-  color: white;
-  justify-content: left;
-  white-space: nowrap;
-}
-.navbarmenusresponsive{
-  overflow-x: auto;
-   white-space: nowrap ; 
 }

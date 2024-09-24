@@ -29,7 +29,6 @@ import { useToken } from "../../../utillity/hooks";
 import FilterMaster from "./FilterMaster";
 import { storeDataProps } from "../../../@types/Store";
 import { dataslistsetfieldnamesProps, mastercateogoryfieldsProps, masterfiednameProps } from "../../../@types/master";
-import categoryimgicon from '../../../assests/categorization.png';
 
 const text = <span>filter</span>;
 const content = (
@@ -103,29 +102,21 @@ export default function Category() {
   console.log(editupdate);
   const columns = [
     {
-      title: "Sno",
+      title: "SNO",
       dataIndex: "sno",
       key: "sno",
       width:20,
-      // title: "SNO",
-      // dataIndex: "sno",
-      // key: "sno",
-    },
-    {
-      title: "customerCategoryId",
-      dataIndex: "customerCategoryId",
-      key: "customerCategoryId",
     },
  
     {
-      title: "Customer categoryname",
+      title: "customerCategoryName",
       dataIndex: "customerCategoryName",
       key: "customerCategoryName",
       width: 200
     },
 
     {
-      title: "Delete",
+      title: "Action",
       key: "action",
       width: 100,
       render: (text:string, record:mastercateogoryfieldsProps) => (
@@ -141,7 +132,7 @@ export default function Category() {
       ),
     },
     {
-      title: "Edit",
+      title: "edit",
       key: "action",
       width: 100,
       render: (text:string, record:mastercateogoryfieldsProps) => (
@@ -170,16 +161,7 @@ export default function Category() {
   return (
     <>
                    <div className={classes.backgroundattarctive}>
-                   <Row justify="center" gutter={[16,16]}>
-                <h1 className="">Category Page</h1>
-                <Image
-          src={categoryimgicon}
-          height={50}
-          preview={false}
- 
-        />
-                
-                </Row>
+      <h1 className="mt-2">Category page</h1>
 
       <Row className="float-end mt-1 me-5" gutter={[8, 8]} align="middle">
         <Col>
@@ -208,37 +190,25 @@ export default function Category() {
         )}
       </Row>
       
-      <Row className="mt-3 ms-5 me-5">
-        <Col span={24}>
-          <Table
-            dataSource={dataSource}
-            columns={columns}
-            pagination={false}
-            bordered
-            className={`mt-2 ms-5 `}
-          />
-        </Col>
-      </Row>
 
       <Table
   dataSource={dataSource}
   columns={columns}
   pagination={false}
   bordered
-  className={`mt-2 table-responsive mx-auto ${classes.customtabless}`}
+  className={`mt-2 table-responsive mx-auto ${classes.tablecontentstyling}`}
 />
 
-{totalitems > 5 && (
-  <Row className="me-5 float-end p-2 ">
-    <Pagination
-      current={currentPage}
-      pageSize={pageSize}
-      total={totalitems}
-      onChange={handlecurrentpage}
-      style={{ textAlign: "center" }}
-    />
-  </Row>
-)}
+      <Row className="me-5 float-end p-5 ">
+        <Pagination
+          current={currentPage}
+          pageSize={pageSize}
+          total={totalitems}
+          onChange={handlecurrentpage}
+          style={{ textAlign: "center" }}
+        />
+      </Row>
+
       {addmodal && (
         <AddModalMaster
           addnew={addmodal}

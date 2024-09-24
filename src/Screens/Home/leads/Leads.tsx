@@ -38,7 +38,6 @@ import { useToken } from "../../../utillity/hooks";
 import { storeDataProps } from "../../../@types/Store";
 import { leadListProps } from "../../../@types/Lead";
 import ConfirmModal from "../Modals/leadmodal/ConfirmModal";
-import customerimg from '../../../assests/service.png';
 
 const text = <span>filter</span>;
 const content = (
@@ -134,33 +133,33 @@ function Leads() {
 
   const columns = [
     {
-      title: "Sno",
+      title: "SNO",
       dataIndex: "sno",
       key: "sno",
     },
     
     {
-      title: "lead name",
+      title: "leadName",
       dataIndex: "leadName",
       key: "leadName",
     },
     {
-      title: "Mobile",
+      title: "mobile",
       dataIndex: "mobile",
       key: "mobile",
     },
     {
-      title: "Address",
+      title: "address",
       dataIndex: "address",
       key: "address",
     },
     {
-      title: "lead statusname",
+      title: "leadStatusName",
       dataIndex: "leadStatusName",
       key: "leadStatusName",
     },
     {
-      title: "Delete",
+      title: "delete",
       key: "action",
       render: (text:string, record:leadListProps) => (
         <Tooltip placement="bottom" title={"Delete"}>
@@ -178,7 +177,7 @@ function Leads() {
       ),
     },
     {
-      title: "Edit",
+      title: "edit",
       key: "action",
       render: (text:string, record:leadListProps) => (
         <Tooltip placement="bottom" title={"Edit"}>
@@ -200,7 +199,7 @@ function Leads() {
       ),
     },
     {
-      title: "IsActive",
+      title: "isActive",
       dataIndex: "isActive",
       key: "isActive",
       render: (text:string, record:leadListProps) => (
@@ -269,18 +268,11 @@ function Leads() {
     <div>
           
           <div className={classes.backgroundattarctive}>
-          <Row justify="center">
-                <h1 className="">Leads Page</h1>
-                <Image
-          src={customerimg}
-          height={50}
-          preview={false}
- 
-        />
-                
-                </Row>
+      <h1>Leads</h1>
       <Row justify="end" className="float-end me-5 " gutter={[12, 16]} align="middle">
-  
+        <Col></Col>
+
+   
         <Col>
           <Tooltip placement="bottom" title={"Filter"}>
             <Popover placement="bottomLeft">
@@ -305,11 +297,7 @@ function Leads() {
         </Col>
       </Row>
 
-<<<<<<< HEAD:src/Screens/Home/leads/Leads.tsx
       <Row className="mt-5 ms-5">{leadfilt && <FilterLead listapicall={list} currentPage={currentPage} />}</Row>
-=======
-      <Row className="mt-5 ms-5">{leadfilt && <FilterLead />}</Row>
->>>>>>> 3a089786c4c01af5b00b0019b563a1994b49f940:src/Screens/Home/leads/Leads.js
 
       <Table
   dataSource={dataSource}
@@ -321,17 +309,16 @@ function Leads() {
   className={`mt-2 table-responsive mx-auto ${classes.tablecontentstyling}`}
 />
 
-{totalItems > 5 && (
-  <Row className="me-5 float-end p-2 ">
-    <Pagination
-      current={currentPage}
-      pageSize={5}
-      total={totalItems}
-      onChange={handlePageChange}
-      style={{ textAlign: "center" }}
-    />
-  </Row>
-)}
+      <Row className="ms-3 me-5 float-end p-5 ">
+        <Pagination
+          current={currentPage}
+          pageSize={pageSize}
+          total={totalItems}
+          onChange={handlePageChange}
+          style={{ textAlign: "center" }}
+        
+        />
+      </Row>
 
       {delete_lead && (
         <Deletelead

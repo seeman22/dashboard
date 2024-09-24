@@ -10,7 +10,6 @@ import {
 import { Outlet } from "react-router-dom";
 import verify from "../../../assests/MAestro__2_-removebg-preview.png";
 import masterimg from "../../../assests/manager (1).png";
-import classes from '../User_Management/Login.module.css';
 
 type MenuItem = {
   key: string;
@@ -132,7 +131,12 @@ function Nav() {
      
             mode="horizontal"
             items={items}
-            className={classes.navbarmenus}
+            style={{
+              backgroundColor: "#000",
+              color: "white",
+              justifyContent: "left",
+              whiteSpace: "nowrap",
+            }}
             theme="dark"
             onSelect={handleSelect}
             defaultSelectedKeys={[String(key)]}
@@ -140,7 +144,7 @@ function Nav() {
         </Col>
       </Row>
 
-      <div className={classes.navbarmenusresponsive}>
+      <div style={{ overflowX: "auto", whiteSpace: "nowrap" }}>
 
         <Outlet />
       </div>

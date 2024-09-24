@@ -11,7 +11,6 @@ import verify from "../../assests/WhatsApp_Image_2024-09-05_at_12.30.47-removebg
 import { UnlockTwoTone } from "@ant-design/icons";
 import logo from "../../assests/MAestro__2_-removebg-preview.png";
 import { resetkey, resetProps } from "../../@types/verifyotp";
-import { Store } from "@mui/icons-material";
 
 const { Title } = Typography;
 
@@ -40,8 +39,8 @@ function VerifyOtp() {
 
   const handleverifyotp = () => {
     let formData = new FormData();
-    const store2:string= sessionStorage.getItem("forgetpassword_reset_key")as string;
-    formData.append("resetKey",store2);
+    const store2= sessionStorage.getItem("forgetpassword_reset_key");
+    formData.append("resetKey", store2||"");
     formData.append("otp", texts);
 
     verifyotp(formData).then((res) => {
@@ -82,11 +81,8 @@ function VerifyOtp() {
           clearInterval(intervalId.current!); // Ensure interval is cleared properly
           setShowResendButton(true);
         }
-        
         return prev - 1;
-       
       });
- 
     }, 1000);
 
     // Cleanup function to clear interval

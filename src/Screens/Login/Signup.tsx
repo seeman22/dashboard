@@ -105,11 +105,7 @@ function Signup() {
             />
             <Row justify="end">
               <Button
-<<<<<<< HEAD:src/Screens/Login/Signup.tsx
           className={`btn btn-danger mt-5 ${classes.custombutton}`}
-=======
-         className={`btn btn-primary mt-5 ${classes.custombutton}`}
->>>>>>> 3a089786c4c01af5b00b0019b563a1994b49f940:src/Screens/Login/Signup.js
                 type="primary"
                 htmlType="submit"
               >

@@ -7,7 +7,6 @@ import { selectorProps } from "../../../@types/dashboard";
 import { Helmet } from "react-helmet";
 import Chart from "react-apexcharts";
 import classes from "../User_Management/Login.module.css"; // Make sure this CSS file has your custom styling
-import mainclasses from '../../../index.css';
 
 const { Title, Text } = Typography;
 
@@ -119,7 +118,7 @@ function Dashboard() {
           
        
           <Col span={24}>
-            <Title level={3}>
+            <Title level={3} style={{ color: "black", marginBottom: "20px" }}>
               Leads Chart
             </Title>
             <Chart
@@ -137,7 +136,7 @@ function Dashboard() {
           {data?.map((item, index) => (
             <Col lg={6} md={12} sm={24} key={index}>
               <Card
-                title={<Title level={4}>{item.displayName}</Title>}
+                title={<Title level={4} style={{ color: "white" }}>{item.displayName}</Title>}
                 bordered={false}
                 hoverable
                 className={classes.card}

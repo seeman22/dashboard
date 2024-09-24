@@ -137,14 +137,9 @@ function Filter({filtermodal,setFiltermodal,listapicall,currentPage}:{filtermoda
             <Button
               type="primary"
               htmlType="submit"
-<<<<<<< HEAD:src/Screens/Home/User_Management/Filter.tsx
               className={`btn btn-danger ms-5  ${classes.custombutton}`}
             
         
-=======
-              className={`btn btn-danger ms-5 ${classes.custombutton}`}
-              justify="center"
->>>>>>> 3a089786c4c01af5b00b0019b563a1994b49f940:src/Screens/Home/User_Management/Filter.js
             >
               Submit
             </Button>
@@ -152,11 +147,7 @@ function Filter({filtermodal,setFiltermodal,listapicall,currentPage}:{filtermoda
           <Col>
             {" "}
             <Button
-<<<<<<< HEAD:src/Screens/Home/User_Management/Filter.tsx
                  className={`btn btn-danger  ${classes.custombutton}`}
-=======
-                  className={`btn btn-danger ${classes.custombutton}`}
->>>>>>> 3a089786c4c01af5b00b0019b563a1994b49f940:src/Screens/Home/User_Management/Filter.js
               onClick={handlereset}
             >
               reset

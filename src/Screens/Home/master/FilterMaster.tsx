@@ -55,7 +55,6 @@ function FilterMaster({ searching,setSearching,listapicall ,currentPage}:{
               label="name"
               validateStatus={touched.name && errors.name ? "error" : ""}
               help={touched.name && errors.name ? errors.name : ""}
-              className="ms-5"
             >
               <Input
                 name="name"
@@ -69,11 +68,7 @@ function FilterMaster({ searching,setSearching,listapicall ,currentPage}:{
 
         <Row gutter={[16,16]}>
           <Col>
-<<<<<<< HEAD:src/Screens/Home/master/FilterMaster.tsx
             <Button className={`btn btn-danger mb-2  ${classes.custombutton}`} onClick={handlereset}>
-=======
-            <Button className={`btn btn-danger ms-5 ${classes.custombutton}`} onClick={handlereset}>
->>>>>>> 3a089786c4c01af5b00b0019b563a1994b49f940:src/Screens/Home/master/FilterMaster.js
               reset
             </Button>
           </Col>

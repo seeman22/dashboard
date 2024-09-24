@@ -18,7 +18,6 @@ import { FilterFilled } from "@ant-design/icons";
 import FilterMaster from "./FilterMaster";
 import { storeDataProps } from "../../../@types/Store";
 import { masterfiednameProps, masterrequirementfieldProps } from "../../../@types/master";
-import requirementiconimg from '../../../assests/requirements.png'
 
 function Requirement() {
   const token = useToken();
@@ -84,24 +83,20 @@ function Requirement() {
       title: "SNO",
       dataIndex: "sno",
       key: "sno",
-<<<<<<< HEAD:src/Screens/Home/master/Requirement.tsx
-=======
     },
     {
       title: "enquireTypeName",
       dataIndex: "RequirementsId",
       key: "RequirementsId",
->>>>>>> 3a089786c4c01af5b00b0019b563a1994b49f940:src/Screens/Home/master/Requirement.js
     },
-
     {
-      title: "Requirements name",
+      title: "RequirementsName",
       dataIndex: "RequirementsName",
       key: "RequirementsName",
     },
 
     {
-      title: "Delete",
+      title: "Action",
       key: "action",
       render: (text:string, record:masterrequirementfieldProps) => (
         <Image
@@ -115,7 +110,7 @@ function Requirement() {
       ),
     },
     {
-      title: "Edit",
+      title: "edit",
       key: "action",
       render: (text:string, record:masterrequirementfieldProps) => (
         <Image
@@ -131,27 +126,14 @@ function Requirement() {
     },
   ];
 
-<<<<<<< HEAD:src/Screens/Home/master/Requirement.tsx
   const dataSource = requirementlist?.map((ele,index) => ({
-=======
-  const dataSource = enquirylist?.map((ele,index) => ({
->>>>>>> 3a089786c4c01af5b00b0019b563a1994b49f940:src/Screens/Home/master/Requirement.js
     sno: (currentPage - 1) * pageSize + (index + 1),
     RequirementsId: ele.RequirementsId,
     RequirementsName: ele.RequirementsName,
   }));
   return (
 <div className={classes.backgroundattarctive}>
-<Row justify="center" gutter={[16,16]}>
-                <h1 className="">Requirement Page</h1>
-                <Image
-          src={requirementiconimg}
-          height={50}
-          preview={false}
- 
-        />
-                
-                </Row>
+      <h1 className="mt-2">Requirement page</h1>
 
       <Row className="float-end mt-1 me-5" gutter={[8, 8]} align="middle">
         <Col>
@@ -177,39 +159,23 @@ function Requirement() {
           <FilterMaster searching={searching} setSearching={setSearching} listapicall={list} currentPage={currentPage} />
         )}
       </Row>
-<<<<<<< HEAD:src/Screens/Home/master/Requirement.tsx
       <Table
   dataSource={dataSource}
   columns={columns}
   pagination={false}
-=======
-      <Row className="mt-3 ms-5 me-5">
-        <Col span={24}>
-          <Table
-            dataSource={dataSource}
-            columns={columns}
-            pagination={false}
-            bordered
-            className={`mt-2 ms-5 me-5`}
-          />
-        </Col>
-      </Row>
->>>>>>> 3a089786c4c01af5b00b0019b563a1994b49f940:src/Screens/Home/master/Requirement.js
 
   bordered
   className={`mt-2 table-responsive mx-auto ${classes.tablecontentstyling}`}
 />
-{totalitems > 5 && (
-  <Row className="me-5 float-end p-2 ">
-    <Pagination
-      current={currentPage}
-      pageSize={pageSize}
-      total={totalitems}
-      onChange={handlecurrentpage}
-      style={{ textAlign: "center" }}
-    />
-  </Row>
-)}
+      <Row className="me-5 float-end p-5 ">
+        <Pagination
+          current={currentPage}
+          pageSize={pageSize}
+          total={totalitems}
+          onChange={handlecurrentpage}
+          style={{ textAlign: "center" }}
+        />
+      </Row>
 
       {addmodal && (
         <AddModalMaster

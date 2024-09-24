@@ -15,14 +15,13 @@ import Category from '../Screens/Home/master/Category';
 import Enquiry from '../Screens/Home/master/Enquiry';
 import Requirement from '../Screens/Home/master/Requirement';
 import AddleadModal from '../Screens/Home/Modals/leadmodal/AddleadModal';
-import TestDashboard from '../Screens/Home/Dashboard/TestDashboard';
 
 function Routerpath() {
   const userType=sessionStorage.getItem("userType");
   const routespath=[
     {
       path: 'dashboard',
-      element: <TestDashboard/>,
+      element: <Dashboard />,
     },
     {
       path:'employee',

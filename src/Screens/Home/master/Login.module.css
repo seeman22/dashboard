@@ -105,7 +105,7 @@
 }
 .icon{
   font-size: 24px; /* Adjust this value as needed */
-  color: black;
+  color: #000;
 }
 .icons{
   font-size: 54px; /* Adjust this value as needed */
@@ -121,50 +121,11 @@
   padding: 10px 20px; /* Adjust padding to your needs */
 }
 .backgroundattarctive {
-  background-color:#f2f2f4; ; 
+  background: linear-gradient(white, black, #B9DFFF); /* Apply gradient correctly */
   min-height: 100vh; /* Full viewport height */
-  min-width: 90vw;
   padding: 40px; /* Add padding */
 }
 .tablecontentstyling{
   width: 90%; max-width: 1200px;
   margin: 0 auto; 
-}
-.customtabless {
-  background-color: #ffffff !important; /* White background for clarity */
-  border-radius: 8px; /* Rounded corners for the table */
-  overflow-x: auto; /* Ensures responsiveness */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-  max-width: 90%;
-  width: 90%; max-width: 1200px;
-  margin: 0 auto; 
-}
-
-.customtabless .ant-table-thead > tr > th {
-  background-color: #f0f0f0; /* Light gray for header */
-  color: #333333; /* Darker text for contrast */
-  font-weight: bold;
-  text-align: center; /* Center-align header text */
-  padding: 12px;
-  border-bottom: 2px solid #ff3800; /* Accent color for headers */
-
-}
-
-.customtabless .ant-table-tbody > tr > td {
-  color: #000000; /* Clear black text */
-  padding: 10px;
-  text-align: center; /* Center-align cell text */
-}
-
-.customtabless .ant-table-tbody > tr:hover {
-  background-color: #fafafa; /* Light hover effect */
-}
-
-.customtabless .ant-table-tbody > tr > td,
-.customtabless .ant-table-thead > tr > th {
-  border: 1px solid #dddddd; /* Soft borders */
-}
-
-.customtabless .ant-table-tbody > tr > td {
-  transition: background-color 0.2s ease-in-out; /* Smooth transition on hover */
 }

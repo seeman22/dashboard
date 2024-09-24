@@ -27,7 +27,6 @@ import { FilterFilled } from "@ant-design/icons";
 import FilterMaster from "./FilterMaster";
 import { storeDataProps } from "../../../@types/Store";
 import { masterenquiryfieldsProps, masterfiednameProps } from "../../../@types/master";
-import enquiryiconiamge from '../../../assests/enquiry.png'
 
 export default function Enquiry() {
   const token = useToken();
@@ -95,11 +94,6 @@ useEffect(() => {
 
   const columns = [
     {
-<<<<<<< HEAD:src/Screens/Home/master/Enquiry.tsx
-      title: "Sno",
-      dataIndex: "sno",
-      key: "sno",
-=======
       title: "SNO",
       dataIndex: "sno",
       key: "sno",
@@ -108,16 +102,15 @@ useEffect(() => {
       title: "enquireId",
       dataIndex: "enquireId",
       key: "enquireId",
->>>>>>> 3a089786c4c01af5b00b0019b563a1994b49f940:src/Screens/Home/master/Enquiry.js
     },
     {
-      title: "Enquire typename",
+      title: "enquireTypeName",
       dataIndex: "enquireTypeName",
       key: "enquireTypeName",
     },
 
     {
-      title: "Delete",
+      title: "Action",
       key: "action",
       render: (text:string, record:masterenquiryfieldsProps) => (
        
@@ -132,7 +125,7 @@ useEffect(() => {
       ),
     },
     {
-      title: "Edit",
+      title: "edit",
       key: "action",
       render: (text:string, record:masterenquiryfieldsProps) => (
     
@@ -150,9 +143,6 @@ useEffect(() => {
   ];
 
 
-  // const dataSource=enquirylist?.map((ele)=>{
-  //     enquireTypeName:ele.enquireTypeName,
-  // })
   const dataSource = enquirylist?.map((ele,index) => ({
     sno: (currentPage - 1) * pageSize + (index + 1),
     enquireId: ele.enquireId,
@@ -161,16 +151,7 @@ useEffect(() => {
 
   return (
 <div className={classes.backgroundattarctive}>
-<Row justify="center" gutter={[16,16]}>
-                <h1 className="">Enquiry Page</h1>
-                <Image
-          src={enquiryiconiamge}
-          height={50}
-          preview={false}
- 
-        />
-                
-                </Row>
+      <h1 className="mt-2">Enquiry page</h1>
 
       <Row className="float-end mt-1 me-5" gutter={[8, 8]} align="middle">
         <Col>
@@ -199,7 +180,6 @@ useEffect(() => {
           <FilterMaster searching={searching} setSearching={setSearching} listapicall={list} currentPage={currentPage} />
         )}
       </Row>
-<<<<<<< HEAD:src/Screens/Home/master/Enquiry.tsx
       <Table
   dataSource={dataSource}
   columns={columns}
@@ -207,31 +187,16 @@ useEffect(() => {
   bordered
   className={`mt-2 table-responsive mx-auto ${classes.tablecontentstyling}`}
 />
-=======
-      <Row className="mt-3 ms-5 me-5">
-        <Col span={24}>
-          <Table
-            dataSource={dataSource}
-            columns={columns}
-            pagination={false}
-            bordered
-            className={`mt-2 ms-5 me-5`}
-          />
-        </Col>
-      </Row>
->>>>>>> 3a089786c4c01af5b00b0019b563a1994b49f940:src/Screens/Home/master/Enquiry.js
 
-{totalitems > 5 && (
-  <Row className="me-5 float-end p-2 ">
-    <Pagination
-      current={currentPage}
-      pageSize={pageSize}
-      total={totalitems}
-      onChange={handlecurrentpage}
-      style={{ textAlign: "center" }}
-    />
-  </Row>
-)}
+      <Row className="me-5 float-end p-5 ">
+        <Pagination
+          current={currentPage}
+          pageSize={pageSize}
+          total={totalitems}
+          onChange={handlecurrentpage}
+          style={{ textAlign: "center" }}
+        />
+      </Row>
 
       {addmodal && (
         <AddModalMaster

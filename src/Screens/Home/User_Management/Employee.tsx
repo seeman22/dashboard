@@ -30,7 +30,6 @@ import editimg from "../../../assests/user-avatar.png";
 import { useToken } from "../../../utillity/hooks";
 import { admindataProps, booleanvaluableProps } from "../../../@types/Admin";
 import { searchingProps } from "../../../@types/Filter";
-import employeeimg from '../../../assests/mechanic (1).png'
 
 const text = <span>filter</span>;
 const content = (
@@ -61,7 +60,7 @@ function Employee() {
     dispatch(handleuserType("4"));
   };
 
-  const handlesub = (page = 1, size = 5,search={userName: "",
+  const handlesub = (page = 1, size = 2,search={userName: "",
     dealerId: "",
     email: "",
     phoneNumber: ""}) => {
@@ -124,14 +123,6 @@ function Employee() {
       title: "SNO",
       dataIndex: "sno",
       key: "sno",
-<<<<<<< HEAD:src/Screens/Home/User_Management/Employee.tsx
-=======
-    },
-    {
-      title: "Name",
-      dataIndex: "name",
-      key: "name",
->>>>>>> 3a089786c4c01af5b00b0019b563a1994b49f940:src/Screens/Home/User_Management/Employee.js
     },
     // {
     //   title: "Name",
@@ -184,11 +175,7 @@ function Employee() {
   ];
 
   const dataSource = dta.map((ele,index) => ({
-<<<<<<< HEAD:src/Screens/Home/User_Management/Employee.tsx
-    sno: (currentPage - 1) * 5 + (index + 1),
-=======
     sno: (currentPage - 1) * 2 + (index + 1),
->>>>>>> 3a089786c4c01af5b00b0019b563a1994b49f940:src/Screens/Home/User_Management/Employee.js
     name: ele.name,
     userName: ele.userName,
     phoneNumber: ele.phoneNumber,
@@ -199,16 +186,7 @@ function Employee() {
     <>
 
 <div className={classes.backgroundattarctive}>
-<Row justify="center" gutter={[16,16]}>
-                <h1 className="">Employee Page</h1>
-                <Image
-          src={employeeimg}
-          height={50}
-          preview={false}
- 
-        />
-                
-                </Row>
+      <h1 className="mt-2">Employee page</h1>
       <Row className="float-end mt-2 me-5" gutter={[24, 16]} align="middle">
         <Col>
           <Popover placement="bottomLeft">
@@ -239,17 +217,15 @@ function Employee() {
   className={`mt-2 table-responsive mx-auto ${classes.tablecontentstyling}`}
 />
 
-{totalItems > 5 && (
-  <Row className="me-5 float-end p-2 ">
-    <Pagination
-      current={currentPage}
-      pageSize={5}
-      total={totalItems}
-      onChange={handlePageChange}
-      style={{ textAlign: "center" }}
-    />
-  </Row>
-)}
+      <Row className="me-5 float-end p-5 ">
+        <Pagination
+          current={currentPage}
+          pageSize={2}
+          total={totalItems}
+          onChange={handlePageChange}
+          style={{ textAlign: "center" }}
+        />
+      </Row>
 
       {addnew && (
         <AddNew

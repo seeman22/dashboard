@@ -400,7 +400,7 @@ function AddleadModal() {
                 onChange={handleChange}
                 onBlur={handleBlur}
                 style={{ width: "50%" }}
-                placeholder="Enter the address"
+                placeholder="address"
               />
             </Form.Item>
           </Col>
@@ -441,7 +441,6 @@ function AddleadModal() {
                 onChange={handleChange}
                 onBlur={handleBlur}
                 style={{ width: "50%" }}
-                placeholder="Enter the email"
               />
             </Form.Item>
           </Col>
@@ -798,7 +797,7 @@ function AddleadModal() {
                 name="Pincode"
                 type="number"
      
-                placeholder="Enter the pincode"
+                placeholder="Enter pincode"
                 value={values.Pincode}
                 onChange={handleChange}
                 onBlur={handleBlur}
@@ -832,7 +831,7 @@ function AddleadModal() {
               <Input
               name="assignedTo"
               type="text"
-              placeholder="Enter the assinedto"
+              placeholder=""
               value={values.assignedTo}
               onChange={handleChange}
               onBlur={handleBlur}
@@ -861,7 +860,7 @@ function AddleadModal() {
               <Input
               name="refer_country_code"
               type="text"
-              placeholder="Enter the refercountry code"
+              placeholder=""
               value={values.refer_country_code}
               onChange={handleChange}
               onBlur={handleBlur}
@@ -879,7 +878,6 @@ function AddleadModal() {
               onChange={handleChange}
               onBlur={handleBlur}
               style={{width:'50%'}}
-              placeholder="Enter the referedphone"
              />
             </Form.Item>
             </Col>
@@ -891,12 +889,11 @@ function AddleadModal() {
               <Input
               name="alter_country_code"
               type="text"
-              placeholder="Enter the alter_country_code"
+              placeholder=""
               value={values.alter_country_code}
               onChange={handleChange}
               onBlur={handleBlur}
               style={{width:'50%'}}
-
               />
             </Form.Item>
             </Col>
@@ -910,7 +907,6 @@ function AddleadModal() {
               onChange={handleChange}
               onBlur={handleBlur}
               style={{width:'50%'}}
-              placeholder="Enter the company_name"
              />
             </Form.Item>
             </Col>

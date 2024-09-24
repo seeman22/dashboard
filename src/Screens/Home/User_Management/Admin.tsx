@@ -27,7 +27,6 @@ import filterimg from "../../../assests/filter.png";
 import { useToken } from "../../../utillity/hooks";
 import { admindataProps, booleanvaluableProps } from "../../../@types/Admin";
 import { FormValues, searchingProps } from "../../../@types/Filter";
-import adminimg from '../../../assests/admin.png'
 
 const text = <span>filter</span>;
 const content = (
@@ -59,7 +58,7 @@ function Admin() {
     }
   }, [token, currentPage]);
 
-  const handlesub = (page = 1, size = 5,search={userName: "",
+  const handlesub = (page = 1, size = 2,search={userName: "",
     dealerId: "",
     email: "",
     phoneNumber: ""}) => {
@@ -107,22 +106,15 @@ function Admin() {
 
   const columns = [
     {
-<<<<<<< HEAD:src/Screens/Home/User_Management/Admin.tsx
-      title: "Sno",
-      dataIndex: "sno",
-      key: "sno",
-=======
       title: "SNO",
       dataIndex: "sno",
       key: "sno",
     },
-    {
-      title: "Name",
-      dataIndex: "name",
-      key: "name",
->>>>>>> 3a089786c4c01af5b00b0019b563a1994b49f940:src/Screens/Home/User_Management/Admin.js
-    },
-
+    // {
+    //   title: "Name",
+    //   dataIndex: "name",
+    //   key: "name",
+    // },
     {
       title: "Username",
       dataIndex: "userName",
@@ -138,7 +130,13 @@ function Admin() {
       title: "Action",
       key: "action",
       render: ( record:{userId:string}) => (
-    
+        // <button
+        //     type="button"
+        //     className={`btn btn-primary ${classes.btnnnn}`}
+        //     onClick={() => deleteddd(record.userId)}
+        // >
+        //     Delete
+        // </button>
         <Image
           src={deleteimg}
           height={30}
@@ -153,11 +151,7 @@ function Admin() {
   console.log(dta);
 
   const dataSource = dta.map((ele,index) => ({
-<<<<<<< HEAD:src/Screens/Home/User_Management/Admin.tsx
-    sno: (currentPage - 1) * 5 + (index + 1),
-=======
     sno: (currentPage - 1) * 2 + (index + 1),
->>>>>>> 3a089786c4c01af5b00b0019b563a1994b49f940:src/Screens/Home/User_Management/Admin.js
     name: ele.name,
     userName: ele.userName,
     phoneNumber: ele.phoneNumber,
@@ -165,22 +159,14 @@ function Admin() {
 
 
   }));
-
+  // const handlefilt=()=>{
+  //     dispatch(handlefilt(true));
+  // }
 console.log(User_Id)
   return (
     <>
               <div className={classes.backgroundattarctive}>
-                <Row justify="center" gutter={[16,16]}>
-                <h1 className="">Admin Page</h1>
-                <Image
-          src={adminimg}
-          height={50}
-          preview={false}
- 
-        />
-                
-                </Row>
-     
+      <h1 className="mt-2">Admin page</h1>
 
       <Row className="float-end mt-2 me-5" gutter={[24, 16]} align="middle">
         <Col>
@@ -211,18 +197,16 @@ console.log(User_Id)
   className={`mt-2 table-responsive mx-auto ${classes.tablecontentstyling}`}
   
 />
-{totalItems > 5 && (
-  <Row className="me-5 float-end p-2 ">
-    <Pagination
-      current={currentPage}
-      pageSize={5}
-      total={totalItems}
-      onChange={handlePageChange}
-      style={{ textAlign: "center" }}
-    />
-  </Row>
-)}
-    
+
+      <Row className="me-5 float-end p-5 ">
+        <Pagination
+          current={currentPage}
+          pageSize={2}
+          total={totalItems}
+          onChange={handlePageChange}
+          style={{ textAlign: "center" }}
+        />
+      </Row>
 
       {addnew && (
         <AddNew
