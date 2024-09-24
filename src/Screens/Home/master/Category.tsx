@@ -107,6 +107,14 @@ export default function Category() {
       dataIndex: "sno",
       key: "sno",
       width:20,
+      // title: "SNO",
+      // dataIndex: "sno",
+      // key: "sno",
+    },
+    {
+      title: "customerCategoryId",
+      dataIndex: "customerCategoryId",
+      key: "customerCategoryId",
     },
  
     {
@@ -200,6 +208,17 @@ export default function Category() {
         )}
       </Row>
       
+      <Row className="mt-3 ms-5 me-5">
+        <Col span={24}>
+          <Table
+            dataSource={dataSource}
+            columns={columns}
+            pagination={false}
+            bordered
+            className={`mt-2 ms-5 `}
+          />
+        </Col>
+      </Row>
 
       <Table
   dataSource={dataSource}

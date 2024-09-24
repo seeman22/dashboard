@@ -61,10 +61,14 @@ function Dealer() {
     dispatch(handleuserType("3"));
   };
 
+<<<<<<< HEAD:src/Screens/Home/User_Management/Dealer.tsx
   const handlesub = (page = 1, size = 5,search={userName: "",
     dealerId: "",
     email: "",
     phoneNumber: ""}) => {
+=======
+  const handlesub = (page = 1, size = 2) => {
+>>>>>>> 3a089786c4c01af5b00b0019b563a1994b49f940:src/Screens/Home/User_Management/Dealer.js
     let formData = new FormData();
     formData.append("token", token);
     formData.append("type", "3");
@@ -123,6 +127,14 @@ function Dealer() {
       title: "SNO",
       dataIndex: "sno",
       key: "sno",
+<<<<<<< HEAD:src/Screens/Home/User_Management/Dealer.tsx
+=======
+    },
+    {
+      title: "Name",
+      dataIndex: "name",
+      key: "name",
+>>>>>>> 3a089786c4c01af5b00b0019b563a1994b49f940:src/Screens/Home/User_Management/Dealer.js
     },
 
     {
@@ -167,7 +179,11 @@ function Dealer() {
   ];
 
   const dataSource = dta.map((ele,index) => ({
+<<<<<<< HEAD:src/Screens/Home/User_Management/Dealer.tsx
     sno: (currentPage - 1) * 5 + (index + 1),
+=======
+    sno: (currentPage - 1) * 2 + (index + 1),
+>>>>>>> 3a089786c4c01af5b00b0019b563a1994b49f940:src/Screens/Home/User_Management/Dealer.js
     name: ele.name,
     userName: ele.userName,
     phoneNumber: ele.phoneNumber,

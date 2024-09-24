@@ -305,7 +305,11 @@ function Leads() {
         </Col>
       </Row>
 
+<<<<<<< HEAD:src/Screens/Home/leads/Leads.tsx
       <Row className="mt-5 ms-5">{leadfilt && <FilterLead listapicall={list} currentPage={currentPage} />}</Row>
+=======
+      <Row className="mt-5 ms-5">{leadfilt && <FilterLead />}</Row>
+>>>>>>> 3a089786c4c01af5b00b0019b563a1994b49f940:src/Screens/Home/leads/Leads.js
 
       <Table
   dataSource={dataSource}

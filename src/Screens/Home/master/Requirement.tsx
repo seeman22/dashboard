@@ -84,6 +84,14 @@ function Requirement() {
       title: "SNO",
       dataIndex: "sno",
       key: "sno",
+<<<<<<< HEAD:src/Screens/Home/master/Requirement.tsx
+=======
+    },
+    {
+      title: "enquireTypeName",
+      dataIndex: "RequirementsId",
+      key: "RequirementsId",
+>>>>>>> 3a089786c4c01af5b00b0019b563a1994b49f940:src/Screens/Home/master/Requirement.js
     },
 
     {
@@ -123,7 +131,11 @@ function Requirement() {
     },
   ];
 
+<<<<<<< HEAD:src/Screens/Home/master/Requirement.tsx
   const dataSource = requirementlist?.map((ele,index) => ({
+=======
+  const dataSource = enquirylist?.map((ele,index) => ({
+>>>>>>> 3a089786c4c01af5b00b0019b563a1994b49f940:src/Screens/Home/master/Requirement.js
     sno: (currentPage - 1) * pageSize + (index + 1),
     RequirementsId: ele.RequirementsId,
     RequirementsName: ele.RequirementsName,
@@ -165,10 +177,24 @@ function Requirement() {
           <FilterMaster searching={searching} setSearching={setSearching} listapicall={list} currentPage={currentPage} />
         )}
       </Row>
+<<<<<<< HEAD:src/Screens/Home/master/Requirement.tsx
       <Table
   dataSource={dataSource}
   columns={columns}
   pagination={false}
+=======
+      <Row className="mt-3 ms-5 me-5">
+        <Col span={24}>
+          <Table
+            dataSource={dataSource}
+            columns={columns}
+            pagination={false}
+            bordered
+            className={`mt-2 ms-5 me-5`}
+          />
+        </Col>
+      </Row>
+>>>>>>> 3a089786c4c01af5b00b0019b563a1994b49f940:src/Screens/Home/master/Requirement.js
 
   bordered
   className={`mt-2 table-responsive mx-auto ${classes.tablecontentstyling}`}

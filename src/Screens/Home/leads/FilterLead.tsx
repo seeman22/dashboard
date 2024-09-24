@@ -61,7 +61,43 @@ function FilterLead({listapicall,currentPage}:{listapicall:(page:number,size:num
   return (
     <>
       <Form onFinish={handleSubmit}>
+<<<<<<< HEAD:src/Screens/Home/leads/FilterLead.tsx
         <Row gutter={[16,16]}>
+=======
+        <Row gutter={[16,16]}> 
+          <Col>
+            <Form.Item
+              label="Lead ID"
+              validateStatus={touched.leadId && errors.leadId ? "error" : ""}
+              help={touched.leadId && errors.leadId ? errors.leadId : ""}
+            >
+              <Input
+                name="leadId"
+                value={values.leadId}
+                onChange={handleChange}
+                onBlur={handleBlur}
+              />
+            </Form.Item>
+          </Col>
+
+          <Col>
+            <Form.Item
+              label="Lead Code"
+              validateStatus={
+                touched.leadCode && errors.leadCode ? "error" : ""
+              }
+              help={touched.leadCode && errors.leadCode ? errors.leadCode : ""}
+            >
+              <Input
+                name="leadCode"
+                value={values.leadCode}
+                onChange={handleChange}
+                onBlur={handleBlur}
+              />
+            </Form.Item>
+          </Col>
+
+>>>>>>> 3a089786c4c01af5b00b0019b563a1994b49f940:src/Screens/Home/leads/FilterLead.js
           <Col>
             <Form.Item
               label="Lead Name"
@@ -127,9 +163,15 @@ function FilterLead({listapicall,currentPage}:{listapicall:(page:number,size:num
           </Col>
         </Row>
 
+<<<<<<< HEAD:src/Screens/Home/leads/FilterLead.tsx
         <Row gutter={[16,16]}>
           <Col>
             <Button className={`btn btn-danger ${classes.custombutton}`}onClick={handlereset}>
+=======
+        <Row gutter={[24,16]}>
+          <Col>
+            <Button     className={`btn btn-danger ${classes.custombutton}`} onClick={handlereset}>
+>>>>>>> 3a089786c4c01af5b00b0019b563a1994b49f940:src/Screens/Home/leads/FilterLead.js
               reset
             </Button>
           </Col>

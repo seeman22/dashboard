@@ -95,9 +95,20 @@ useEffect(() => {
 
   const columns = [
     {
+<<<<<<< HEAD:src/Screens/Home/master/Enquiry.tsx
       title: "Sno",
       dataIndex: "sno",
       key: "sno",
+=======
+      title: "SNO",
+      dataIndex: "sno",
+      key: "sno",
+    },
+    {
+      title: "enquireId",
+      dataIndex: "enquireId",
+      key: "enquireId",
+>>>>>>> 3a089786c4c01af5b00b0019b563a1994b49f940:src/Screens/Home/master/Enquiry.js
     },
     {
       title: "Enquire typename",
@@ -139,6 +150,9 @@ useEffect(() => {
   ];
 
 
+  // const dataSource=enquirylist?.map((ele)=>{
+  //     enquireTypeName:ele.enquireTypeName,
+  // })
   const dataSource = enquirylist?.map((ele,index) => ({
     sno: (currentPage - 1) * pageSize + (index + 1),
     enquireId: ele.enquireId,
@@ -185,6 +199,7 @@ useEffect(() => {
           <FilterMaster searching={searching} setSearching={setSearching} listapicall={list} currentPage={currentPage} />
         )}
       </Row>
+<<<<<<< HEAD:src/Screens/Home/master/Enquiry.tsx
       <Table
   dataSource={dataSource}
   columns={columns}
@@ -192,6 +207,19 @@ useEffect(() => {
   bordered
   className={`mt-2 table-responsive mx-auto ${classes.tablecontentstyling}`}
 />
+=======
+      <Row className="mt-3 ms-5 me-5">
+        <Col span={24}>
+          <Table
+            dataSource={dataSource}
+            columns={columns}
+            pagination={false}
+            bordered
+            className={`mt-2 ms-5 me-5`}
+          />
+        </Col>
+      </Row>
+>>>>>>> 3a089786c4c01af5b00b0019b563a1994b49f940:src/Screens/Home/master/Enquiry.js
 
 {totalitems > 5 && (
   <Row className="me-5 float-end p-2 ">

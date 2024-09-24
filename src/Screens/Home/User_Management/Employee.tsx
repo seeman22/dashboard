@@ -124,6 +124,14 @@ function Employee() {
       title: "SNO",
       dataIndex: "sno",
       key: "sno",
+<<<<<<< HEAD:src/Screens/Home/User_Management/Employee.tsx
+=======
+    },
+    {
+      title: "Name",
+      dataIndex: "name",
+      key: "name",
+>>>>>>> 3a089786c4c01af5b00b0019b563a1994b49f940:src/Screens/Home/User_Management/Employee.js
     },
     // {
     //   title: "Name",
@@ -176,7 +184,11 @@ function Employee() {
   ];
 
   const dataSource = dta.map((ele,index) => ({
+<<<<<<< HEAD:src/Screens/Home/User_Management/Employee.tsx
     sno: (currentPage - 1) * 5 + (index + 1),
+=======
+    sno: (currentPage - 1) * 2 + (index + 1),
+>>>>>>> 3a089786c4c01af5b00b0019b563a1994b49f940:src/Screens/Home/User_Management/Employee.js
     name: ele.name,
     userName: ele.userName,
     phoneNumber: ele.phoneNumber,
